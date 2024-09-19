@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uchiha Island</title>
+    <link rel="stylesheet" href="styles/puzzle1.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+</head>
+<body>
+    <img src="assets/restart.png" alt="Restart" class="restart-button" onclick="handleRestart();">
+    <div class="log-box">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>you need a secret code to open this lock</p>
+        <p>&nbsp;</p>
+        <p>a 4 digit code with no numbers repeating</p>
+        <p>&nbsp;</p>
+        <p>you have to guess the code</p>
+        <p>&nbsp;</p>
+        <p>with each attempt, you will get a hint</p>
+    </div>
+
+    <div class="play-box">
+        <div class="rect" id="rect-1" onclick="changeNumber(1, 1)">
+            <button class="arrow top-arrow" onclick="changeNumber(1, 0);">
+                <img src="assets/arrow.png" alt="Up arrow" class="arrow-image">
+            </button>
+            <div class="digit" id="digit-1">0</div>
+            <button class="arrow bottom-arrow" onclick="changeNumber(1, -2);">
+                <img src="assets/arrow.png" alt="Down arrow" class="arrow-image rotate">
+            </button>
+        </div>
+
+        <div class="rect" id="rect-2" onclick="changeNumber(2, 1)">
+            <button class="arrow top-arrow" onclick="changeNumber(2, 0);">
+                <img src="assets/arrow.png" alt="Up arrow" class="arrow-image">
+            </button>
+            <div class="digit" id="digit-2">1</div>
+            <button class="arrow bottom-arrow" onclick="changeNumber(2, -2);">
+                <img src="assets/arrow.png" alt="Down arrow" class="arrow-image rotate">
+            </button>
+        </div>
+
+        <div class="rect" id="rect-3" onclick="changeNumber(3, 1)">
+            <button class="arrow top-arrow" onclick="changeNumber(3, 0);">
+                <img src="assets/arrow.png" alt="Up arrow" class="arrow-image">
+            </button>
+            <div class="digit" id="digit-3">2</div>
+            <button class="arrow bottom-arrow" onclick="changeNumber(3, -2);">
+                <img src="assets/arrow.png" alt="Down arrow" class="arrow-image rotate">
+            </button>
+        </div>
+
+        <div class="rect" id="rect-4" onclick="changeNumber(4, 1)">
+            <button class="arrow top-arrow" onclick="changeNumber(4, 0);">
+                <img src="assets/arrow.png" alt="Up arrow" class="arrow-image">
+            </button>
+            <div class="digit" id="digit-4">3</div>
+            <button class="arrow bottom-arrow" onclick="changeNumber(4, -2);">
+                <img src="assets/arrow.png" alt="Down arrow" class="arrow-image rotate">
+            </button>
+        </div>
+    </div>
+
+    <div class="action-box">
+        <div class="chatbox">
+            <div class="message-box">
+                change the numbers using the arrows and click on the 'GO!' button to guess.
+            </div>
+        </div>
+        <img src="assets/pirate.png" alt="Pirate Image" class="fixed-image">
+        <div class="go-box">
+            <button class="center-button" onclick="handleGoButtonClick();">GO!</button>
+            <p class="button-description">BROCODE SHIP 00</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="scripts/puzzle1.js"></script>
+</body>
+</html>
